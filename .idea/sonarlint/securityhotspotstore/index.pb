@@ -7,3 +7,7 @@ G
 src/model/mod.rs,d/a/da39f7548a75e00972c814143e15fd7bafa3ba31
 I
 src/model/notification.rs,4/7/47981c1597ae78655253c0a1d3407991b1c57e9a
+N
+src/repository/notification.rs,7/f/7fc22a7b9dec7ef97da5b6bd484459e4caf3fc45
+E
+src/repository/mod.rs,1/e/1e5fab9632071c9cc56c3f0ad6ac38e9b890d633
