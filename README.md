@@ -42,6 +42,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     APP_INSTANCE_NAME=Safira Sudrajat
     ```
     Here are the details of each environment variable:
+2. 
     | variable                | type   | description                                                     |
     |-------------------------|--------|-----------------------------------------------------------------|
     | ROCKET_PORT             | string | Port number that will be listened by this receiver instance.    |
