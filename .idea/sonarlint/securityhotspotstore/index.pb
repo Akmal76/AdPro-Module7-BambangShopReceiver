@@ -19,3 +19,13 @@ N
 src/controller/notification.rs,f/e/feeae9b8cc51c20dc5c6a76bbf46751d2da708e3
 E
 src/controller/mod.rs,e/2/e288bf9ffd16269f64107ebd8fadffad01843a5d
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+:
+
+src/lib.rs,b/2/b24749917179fb5e3e613ed2a703fcdcc6cdf9da
+;
+src/main.rs,4/b/4b569f42a6967dec04275af54f4ca9ab6a4eee64

@@ -78,7 +78,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement receive function in Notification controller.`
     -   [x] Commit: `Implement list_messages function in Notification service.`
     -   [x] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -95,3 +95,16 @@ Hal tersebut karena `RwLock<>` memungkinkan `Vec<Notification>` untuk di-_read_ 
 Dibandingkan dengan Java, Rust tidak mengizinkan kita untuk melakukan hal tersebut untuk mencegah isu pada _multi-threading_. Secara _default_, _static_ variabel di Rust dibuat _immutable_ agar aman untuk melakukan _concurrency_. `lazy_static` disini berfungsi untuk menginisilisasi variabel ketika pertama kali digunakan dan membuat variabel tersebut bersifat Singleton pada kasus ini. Lalu, agar dapat bersifat _mutable_, digunakan `RwLock<>` untuk mengizinkan _read_ dan _write_ secara bersamaan pada `Vec<Notification>`.
 
 #### Reflection Subscriber-2
+
+> Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+Ya, namun hanya sekilas. Yang saya pahami bahwa `src/lib.rs` berfungsi untuk _main modul_ dari proyek yang kita buat. Kode ini berisi import _crate_ dan modul, struktur `AppConfig`, dan _error handling_.
+
+> Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+Ya, tetap mudah ditambahkan ke dalam sistem karena _design pattern_ yang digunakan memudahkan kasus tersebut. Setiap _instance Main app_ bertanggungjawab untuk memberikan dan mengelola notifikasi kepada _observer/subscriber_ yang terdaftar. Jika diperlukan notifikasi kepada semua _observer_ dari suatu perubahan _instance_, kita hanya butuh mekanisme komunikasi antar _instance_.
+Jika perlu membuat lebih dari satu _instance Main App_, dapat dilakukan dengan mendaftarkan _observer_ untuk setiap _instance_ aplikasi yang berbeda melalui pengiriman permintaan HTTP ke API yang sesuai.
+
+> Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+Tentunya, fitur tersebut berguna. Untuk membuat _tests_, kita dapat memastikan bahwa kode yang kita buat sudah sesuai harapan. Untuk dokumentasi pada Postman Collection, memudahkan kita untuk menggunakan API dan verifikasi respons sesuai dengan data pada aplikasi. Menurut saya, dokumentasi yang baik adalah dokumentasi yang menjelaskan endpoint, parameter, respons, dan _error handling_. Dokumentasi ini dapat kita lakukan di-tab _overview_.
